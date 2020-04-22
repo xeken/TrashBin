@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<input id="left" placeholder="숫자만">
+<select id="op">
+    <option value="plus" name="plus">+</option>
+    <option value="minus" name="minus">-</option>
+    <option value="multi" name="multi">x</option>
+    <option value="div" name="div">÷</option>
+</select>
+<input id="right" placeholder="숫자만">
+<button onclick="onClick()">계산</button>
+
+<div id="display">
+    <h3>결과창</h3>
+</div>
+<script>
+        async function onClick() {
+        let left = $('#left').val().trim();
+        let op = $('#op').val().trim();
+        let right = $('#right').val().trim();
+
+        if (!left || left === '' || !op || op === '' || !right || right === '') {
+            $('#display').html('제대로 입력해주세요^^');
+            return;
+        }
+        await $.ajax({
+            // url: '/Culc/' +left +'/' +op +'/' + right,
+            url: `/Culc/${left},${op},${right}`,
+            type: 'Get',
+            async: true,
+            success: function (response) {
+                console.log(response);
+                $('#display').html(
+                    JSON.stringify(response))
+            },
+            error: function (err) {
+                console.log('rsrsrs');
+                $('#display').html(
+                    JSON.stringify(err))
+            }
+
+        });
+    }
+
+</script>
+</body>
+</html>

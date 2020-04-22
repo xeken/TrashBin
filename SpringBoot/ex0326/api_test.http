@@ -1,0 +1,53 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+GET http://localhost:8080/userlist
+Accept: application/json
+
+###
+
+GET http://localhost:8080/userview/1
+Accept: application/json
+
+###
+POST http://localhost:8080/userinsert
+Content-Type: application/json
+
+{
+  "userName": "User1",
+  "email": "user2@gmail.com"
+}
+
+###
+PUT http://localhost:8080/userupdate/1
+Content-Type: application/json
+
+{
+  "userName": "ReRe",
+  "email": "rere@naver.com"
+}
+
+###
+
+DELETE http://localhost:8080/userdelete/1
+Content-Type: application/json
+
+###
+GET http://localhost:8080/commentlist
+Accept: application/json
+
+###
+
+POST http://localhost:8080/commentadd
+Content-Type: application/json
+
+{
+  "userName": "test",
+  "userId": 2,
+  "content": "test"
+}
+
+###

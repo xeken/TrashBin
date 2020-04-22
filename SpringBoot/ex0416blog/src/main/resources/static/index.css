@@ -1,0 +1,67 @@
+body{
+
+    margin: 0;
+}
+
+.container{
+
+    position: absolute;
+    text-align: center;
+}
+
+nav, section, aside{
+
+    top: 90px;
+    bottom: 30px;
+}
+
+header{
+
+    height: 90px;
+    left: 0;
+    right: 0;
+    background: #8C87FF;
+}
+
+nav{
+
+    width: 160px;
+    background: #9D7BE8;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+section{
+
+    text-align: left !important;
+    word-break:break-all;
+    word-wrap:break-word;
+    overflow-y: auto;
+    right: 160px;
+    left: 160px;
+    background: #D87BE8;
+}
+
+aside{
+
+    right: 0;
+    left: calc(100vw - 160px);
+    background: #D294FF;
+}
+
+footer{
+
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #FF87E3;
+
+}
+
+/*우선순위*/
+/*id # 100*/
+/*class . 10*/
+/*tag 1*/
+/*important 무한이오
+높을 수록 나중에 적용*/

@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+
+header{
+    height: 120px;
+    width: 100vw;
+}
+aside{
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+}
+section{
+    position: absolute;
+    top: 120px;
+    bottom: 0;
+    left: 0;
+    right: 200px;
+}
+
+header, aside, section{
+    border: 1px solid black;
+}
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #000000aa;
+}
+
+#write-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #000000aa;
+}

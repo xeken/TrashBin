@@ -1,0 +1,17 @@
+.counter {
+  font-size: 20pt;
+  margin: 0;
+  //div:first-child {
+  //  font-size: 1.6rem; // 1rem은 다큐먼트(root)의 폰트사이즈
+  //}
+
+  input {
+    font-size: 1.5em;
+    width: 350px;
+  }
+
+  button {
+    font-size: 1.5em; //1em은 자신의 부모의 폰트사이즈
+  }
+}
+
