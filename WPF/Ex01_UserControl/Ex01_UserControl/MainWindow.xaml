@@ -1,0 +1,53 @@
+﻿<Window x:Class="Ex01_UserControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex01_UserControl"
+        xmlns:uc="clr-namespace:Ex01_UserControl.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <uc:InputText Title="Enter title:" MaxLength="30" Height="50"/>
+        <uc:InputText Title="Enter description:" MaxLength="140" Grid.Row="1" />
+    </Grid>
+</Window>
+
+<!--<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Label Content="Enter title:" />
+		<Label Grid.Column="2" HorizontalAlignment="Right">
+			<StackPanel Orientation="Horizontal" >
+				<TextBlock Text="{Binding ElementName=txtTitle, Path=Text.Length}" />
+				<TextBlock Text="/" />
+				<TextBlock Text="{Binding ElementName=txtTitle, Path=MaxLength}" />
+			</StackPanel>
+		</Label>
+
+		<TextBox Grid.ColumnSpan="3" Grid.Row="1" Name="txtTitle" MaxLength="50"/>
+
+		<Label Grid.Row="2" Content="Enter description:" />
+		<Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right">
+			<StackPanel Orientation="Horizontal" >
+				<TextBlock Text="{Binding ElementName=txtContent, Path=Text.Length}" />
+				<TextBlock Text="/" />
+				<TextBlock Text="{Binding ElementName=txtContent, Path=MaxLength}" />
+			</StackPanel>
+		</Label>
+
+		<TextBox Grid.ColumnSpan="3" Grid.Row="3" Name="txtContent" MaxLength="140" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>-->
