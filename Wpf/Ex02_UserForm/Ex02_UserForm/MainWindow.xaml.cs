@@ -35,6 +35,7 @@ namespace Ex02_UserForm
         {
             AddUserForm window = new AddUserForm();
             window.ShowDialog();
+      
         }
 
         private void btnModifyUser_Click(object sender, RoutedEventArgs e)
