@@ -16,6 +16,5 @@ namespace currency_mvvm2.Model
             Title = title;
             Rate = rate;
         }
-
     }
 }
