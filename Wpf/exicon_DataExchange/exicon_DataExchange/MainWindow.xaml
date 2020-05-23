@@ -1,0 +1,50 @@
+﻿<Window x:Class="exicon_DataExchange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:exicon_DataExchange" xmlns:vm="clr-namespace:exicon_DataExchange.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="275" Width="400" >
+    <Window.DataContext>
+        <vm:ViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="10">
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White"> ListBox1: Header</TextBlock>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList1}" SelectedItem="{Binding SelectedItems}">
+
+                </ListBox>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="5" >
+            <Button Margin="0 20 0 10" Command="{Binding MoveToRightCommand}" CommandParameter="{Binding ElementName=ListBox, Path=SelectedItems}">→</Button>
+            <Button Margin="0 0 0 10" Command="{Binding MoveToLeftCommand}">←</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Margin="10">
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White"> ListBox2: Header</TextBlock>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList2}" />
+            </ScrollViewer>
+        </StackPanel>
+
+        <Border Grid.ColumnSpan="3" Grid.Row="1" Margin="10" BorderThickness="1" BorderBrush="#FF757575">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock Text="{Binding LogText}"/>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>
