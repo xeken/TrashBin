@@ -15,12 +15,13 @@ namespace exicon_DataExchange.ViewModel
         private bool CanExecuteMethod(object arg) => true;
         private void MoveToRight(object obj)
         {
-            LogText += SelectedItems.Count;
+            logText += "QQQQQ\n";
         }
         private void MoveToLeft(object obj)
         {
             LogText += "EEEEEE\n";
         }
+        public static List<String> abc;
 
         private List<String> wordList1;
         public List<String> WordList1
@@ -44,26 +45,6 @@ namespace exicon_DataExchange.ViewModel
             }
         }
 
-        //private ObservableCollection<ItemPresenter> SelectedItems { get; } = new ObservableCollection<ItemPresenter>();
-        ////public ObservableCollection<ItemPresenter> SelectedItems
-        ////{
-        ////    get => this.selectedItems;
-        ////    set
-        ////    {
-        ////        this.selectedItems = value;
-        ////        OnPropertyChanged("SelectedItems");
-        ////    }
-        ////}
-        private bool isSelected;
-        public bool IsSelected
-        {
-            get => this.isSelected;
-            set
-            {
-                isSelected = value;
-                OnPropertyChanged("IsSelected");
-            }
-        }
         private String logText;
         public String LogText
         {
@@ -92,18 +73,5 @@ namespace exicon_DataExchange.ViewModel
             MoveToLeftCommand = new ICommandImpl(MoveToLeft, CanExecuteMethod);
         }
     }
-    public class ItemPresenter : INotifyPropertyChangedImpl
-    {
-        private readonly string _value;
 
-        public ItemPresenter(string value)
-        {
-            _value = value;
-        }
-
-        public override string ToString()
-        {
-            return _value;
-        }
-    }
 }

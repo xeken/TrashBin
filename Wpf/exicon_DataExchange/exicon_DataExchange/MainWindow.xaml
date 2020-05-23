@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:exicon_DataExchange" xmlns:vm="clr-namespace:exicon_DataExchange.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="275" Width="400" >
+        Title="MainWindow" Height="275" Width="400" ResizeMode="NoResize">
     <Window.DataContext>
         <vm:ViewModel />
     </Window.DataContext>
@@ -23,15 +23,13 @@
         <StackPanel Grid.Column="0" Grid.Row="0" Margin="10">
             <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White"> ListBox1: Header</TextBlock>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList1}" SelectedItem="{Binding SelectedItems}">
-
-                </ListBox>
+                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList1}" SelectionChanged="ListBox_SelectionChanged"/>
             </ScrollViewer>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="0" Margin="5" >
-            <Button Margin="0 20 0 10" Command="{Binding MoveToRightCommand}" CommandParameter="{Binding ElementName=ListBox, Path=SelectedItems}">→</Button>
-            <Button Margin="0 0 0 10" Command="{Binding MoveToLeftCommand}">←</Button>
+            <Button Margin="0 20 0 10" Command="{Binding MoveToRightCommand}" Content="→" />
+            <Button Margin="0 0 0 10" Command="{Binding MoveToLeftCommand}" Content="←" />
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="0" Margin="10">
