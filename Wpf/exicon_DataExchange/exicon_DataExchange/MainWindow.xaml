@@ -21,9 +21,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" Margin="10">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White"> ListBox1: Header</TextBlock>
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White" Text="ListBox1: Header" />
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList1}" SelectionChanged="ListBox_SelectionChanged"/>
+                <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList1}" SelectionChanged="ListBox_SelectionChanged" />
             </ScrollViewer>
         </StackPanel>
 
@@ -33,7 +33,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="0" Margin="10">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White"> ListBox2: Header</TextBlock>
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" Padding="2" Background="#FF4472C4" Foreground="White" Text="ListBox2: Header"/>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <ListBox SelectionMode="Multiple" Padding="0" BorderBrush="#FFBACBE9" Height="110" VerticalAlignment="Top" ItemsSource="{Binding WordList2}" />
             </ScrollViewer>
