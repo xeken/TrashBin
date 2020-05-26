@@ -29,27 +29,37 @@ namespace modernUI01
             this.btnIndex3.BackColor = Color.DarkGray;
             this.btnIndex4.BackColor = Color.DarkGray;
 
+            this.pnlIndex1.BackColor = Color.DimGray;
+            this.pnlIndex2.BackColor = Color.DimGray;
+            this.pnlIndex3.BackColor = Color.DimGray;
+            this.pnlIndex4.BackColor = Color.DimGray;
+
             Control ctrl = (Control)sender;
             switch (ctrl.Name.ToString())
             {
                 case "btnIndex1":
                     this.userControl11.Visible = true;
+                    this.pnlIndex1.BackColor = Color.Black;
                     this.btnIndex1.BackColor = Color.DimGray;
                     break;
                 case "btnIndex2":
                     this.userControl21.Visible = true;
+                    this.pnlIndex2.BackColor = Color.Black;
                     this.btnIndex2.BackColor = Color.DimGray;
                     break;
                 case "btnIndex3":
                     this.userControl31.Visible = true;
+                    this.pnlIndex3.BackColor = Color.Black;
                     this.btnIndex3.BackColor = Color.DimGray;
                     break;
                 case "btnIndex4":
                     this.userControl41.Visible = true;
+                    this.pnlIndex4.BackColor = Color.Black;
                     this.btnIndex4.BackColor = Color.DimGray;
                     break;
                 default:
                     this.userControl11.Visible = true;
+                    this.pnlIndex1.BackColor = Color.Black;
                     this.btnIndex1.BackColor = Color.DimGray;
                     break;
             }
@@ -72,20 +82,19 @@ namespace modernUI01
             }
         }
 
-        private bool _isDockFold = true;
+        private bool _isDockFold;
         private void FoldDock_Click(object sender, EventArgs e)
         {
             if(_isDockFold == false)
             {
                 _isDockFold = true;
-                this.pnlMain.Hide();
+                this.pnlSlide.SendToBack();
                 this.btnFoldDock.Image = Properties.Resources.outline_navigate_next_black_24dp;
             }
             else if(_isDockFold == true)
             {
                 _isDockFold = false;
-                this.pnlMain.Show();
-                this.pnlMain.BringToFront();
+                this.pnlSlide.BringToFront();
                 this.btnFoldDock.Image = Properties.Resources.outline_navigate_before_black_24dp;
             }
         }

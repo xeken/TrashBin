@@ -123,5 +123,17 @@
   <ItemGroup>
     <None Include="Resources\outline_navigate_before_black_24dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sharp_widgets_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_widgets_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_power_settings_new_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_fullscreen_white_24dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
